@@ -21,11 +21,6 @@ public class VkCallbackController {
     @Value("${vk.api.endpoint}")
     private String apiEndpoint;
 
-    @GetMapping
-    public String hi() {
-        return "hi";
-    }
-
     @PostMapping
     public String handleCallback(@RequestBody VkMessage vkMessage) {
         switch (vkMessage.getType()) {
